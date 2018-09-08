@@ -1,4 +1,4 @@
-FROM jjanzic/docker-python3-opencv
+FROM mohaseeb/raspberrypi3-python-opencv:latest
 
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
