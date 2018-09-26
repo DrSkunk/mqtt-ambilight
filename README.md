@@ -22,3 +22,10 @@ docker run -it \
     -t mqtt-ambilight
 ```
 
+## Debugging
+
+There is a testing application in the `tester` directory that connects with the mqtt details in `configuration.yaml`. It shows a window with the published as the background color.
+
+To use it you need to install the dependencies in `requirements.txt` with: `pip install -r requirements.txt`. Then run it with `python main.py`.
+
+Note: This is built with tkinter so it needs a desktop environment to work.
