@@ -1,0 +1,23 @@
+# MQTT settings
+mqtt:
+  # MQTT base topic for ambilight MQTT messages
+  # Must end with a trailing slash: /
+  # <base_topic>/color - same message as on <light_topic>
+  # <base_topic>/power
+  base_topic: zigbee2mqtt/
+  # MQTT topic for ambilight MQTT messages
+  light_topic: zigbee2mqttlight/set
+  # MQTT server URL
+  server: 'iot.eclipse.org'
+  # MQTT server authentication, uncomment if required:
+  # user: my_user
+  # password: my_password
+
+webcam_index: 0
+
+# How long to wait between color changes. Zero means it changes as fast as it can.
+# Time is in seconds
+wait_time: 0.5
+
+# Should the color analyzer start as soon as the application is started?
+analyze_on_start: False

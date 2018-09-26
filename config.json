@@ -1,0 +1,11 @@
+{
+    "name": "mqtt amblight",
+    "version": "1",
+    "slug": "mqtt_ambilight",
+    "description": "Get average color from USB capture card and send it over MQTT to your lights.",
+    "startup": "before",
+    "boot": "auto",
+    "options": {},
+    "schema": {}
+  }
+  
