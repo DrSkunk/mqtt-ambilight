@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 import sys
-import tkinter
+from tkinter import *
 import paho.mqtt.client as mqtt
 import yaml
 
@@ -15,9 +15,12 @@ if "mqtt" not in cfg or \
     print("Configuration file is invalid. Needs mqtt base_topic, light_topic and server")
     sys.exit(1)
 
-window = tkinter.Tk()
+window = Tk()
 window.title("MQTT visualiser")
-
+canvas = Frame(window, height=300, width=300)
+canvas.pack()
+color_label = Label(window, height=1, width=7, text="#")
+color_label.pack()
 
 def on_connect(client, userdata, flags, rc):
     print("Connected to mqtt broker with result code "+str(rc))
@@ -27,7 +30,8 @@ def on_connect(client, userdata, flags, rc):
 
 def on_message(client, userdata, msg):
     print(msg.topic+" "+str(msg.payload))
-    window.configure(background=msg.payload)
+    color_label.configure(text=msg.payload)
+    canvas.configure(background=msg.payload)
 
 
 client = mqtt.Client()

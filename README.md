@@ -29,3 +29,5 @@ There is a testing application in the `tester` directory that connects with the 
 To use it you need to install the dependencies in `requirements.txt` with: `pip install -r requirements.txt`. Then run it with `python main.py`.
 
 Note: This is built with tkinter so it needs a desktop environment to work.
+
+![MQTT tester](tester_screenshot.png)
