@@ -14,9 +14,16 @@ try:
     server = cfg['mqtt']['server']
     base_topic = cfg['mqtt']['base_topic']
     light_topic = cfg['mqtt']['light_topic']
+    user = None
+    password = None
     wait_time = cfg['wait_time']
     webcam_index = cfg['webcam_index']
     run_analyzer = cfg['analyze_on_start']
+
+    if 'user' in cfg['mqtt'] and 'password' in cfg['mqtt']:
+        print('user and password found in configuration')
+        user = cfg['mqtt']['user']
+        password = cfg['mqtt']['password']
 
     cap = cv2.VideoCapture(webcam_index)
     if not cap.isOpened():
@@ -57,6 +64,9 @@ def on_message(client, userdata, msg):
 client = mqtt.Client()
 client.on_connect = on_connect
 client.on_message = on_message
+
+if user != None and password != None:
+    client.username_pw_set(user, password)
 
 print("Connecting to mqtt broker " + server)
 client.connect(server, 1883, 60)
