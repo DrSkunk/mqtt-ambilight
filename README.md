@@ -6,8 +6,8 @@ Docker application to get the average color of a webcam/video capture device and
 
 Get it on DockerHub:
 
-- Raspberry Pi version: [https://hub.docker.com/r/whitebird/mqtt-ambilight-rpi/](https://hub.docker.com/r/whitebird/mqtt-ambilight-rpi/)
-- Regular version: [https://hub.docker.com/r/whitebird/mqtt-ambilight/](https://hub.docker.com/r/whitebird/mqtt-ambilight/)
+- Raspberry Pi version: [https://hub.docker.com/r/whitebird/mqtt-ambilight-rpi/](https://hub.docker.com/r/whitebird/mqtt-amblight-rpi)
+- Regular version: [https://hub.docker.com/r/whitebird/mqtt-ambilight/](https://hub.docker.com/r/whitebird/mqtt-ambilight)
 
 To run the application:
 
