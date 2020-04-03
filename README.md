@@ -11,7 +11,7 @@ Get it on DockerHub:
 
 To run the application:
 
-- Copy `configuration.example.yaml` to `configuration.example.yaml` and add your mqtt details.
+- Copy `configuration.example.yaml` to `configuration.yaml` and add your mqtt details.
 - Run it with a command like this: 
 
 ```
